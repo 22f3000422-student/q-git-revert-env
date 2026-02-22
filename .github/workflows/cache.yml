@@ -1,0 +1,25 @@
+name: Cache CI
+
+on:
+  push:
+
+jobs:
+  cache-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cache dependencies
+        id: cache-step
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/demo
+          key: cache-4c1cf01
+
+      - name: prime-cache-4c1cf01
+        run: |
+          echo "Cache hit? ${{ steps.cache-step.outputs.cache-hit }}"
+          mkdir -p ~/.cache/demo
+          echo "cached-data" > ~/.cache/demo/data.txt
