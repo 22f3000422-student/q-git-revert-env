@@ -29,7 +29,7 @@
     { "id": "prod-ad0cbc6c-023", "name": "Standard Item 23", "category": "home", "price": 25.09, "stock": 145, "rating": 3.7 }
   ],
   "aggregations": {
-    "electronics": { "count": 7, "inventoryValue": 114391.25 },
+    "electronics": { "count": 7, "inventoryValue": 113789.92 },
     "home": { "count": 5, "inventoryValue": 156189.89 },
     "clothing": { "count": 5, "inventoryValue": 180746.65 },
     "sports": { "count": 4, "inventoryValue": 99178.34 },
